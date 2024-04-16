@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Password</title>
+</head>
+<body>
+        <h1>Do you really wants to delete this record</h1>
+        <form method="post">
+            {% csrf_token %}
+            <button>Yes</button>
+            <a href="{% url 'show_url' %}">
+                <button type="button">NO</button>
+            </a>
+        </form>
+</body>
+</html>
